@@ -69,3 +69,8 @@ section {
     padding: 80px 20px;
     text-align: center;
 }
+
+#services {
+    background-color: white;
+    color: black;
+}
