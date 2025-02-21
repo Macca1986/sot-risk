@@ -1,76 +1,141 @@
+/* General Styles */
 body {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
+    padding: 0;
+    color: #333;
 }
 
+/* Header */
 header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 0.9em;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 29, 75);
+    min-height: 65px;
+}
+
+/* Navbar */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    background: black;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
+    padding: 10px 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
 }
 
 .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 60%;
+    padding-left: 10%;
+}
+
+.nav-links {
+    list-style: none;
     display: flex;
-    align-items: center;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+    padding-right: 10%;
+    width: 40%;
 }
 
-.logo img {
-    height: 40px;
-    margin-right: 10px;
+.nav-links li {
+    margin-left: 20px;
 }
 
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Mobile Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
     cursor: pointer;
 }
 
-.nav-menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: black;
-    width: 200px;
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 4px;
+    transition: 0.3s;
 }
 
-.nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-menu ul li {
-    padding: 10px;
-    text-align: center;
-}
-
-.nav-menu ul li a {
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') center/cover no-repeat;
     color: white;
-    text-decoration: none;
-    display: block;
+    text-align: center;
+    padding: 100px 20px;
 }
 
-.nav-menu.active {
-    display: block;
-}
-
+/* Sections */
 section {
-    padding: 80px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
-#services {
-    background-color: white;
-    color: black;
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }
