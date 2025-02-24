@@ -46,6 +46,7 @@ nav {
 
 #srm-logo {
     max-width: 35%;
+    min-width: 200px;
 }
 
 .nav-links {
@@ -255,5 +256,6 @@ footer {
 
     #about-pic {
         max-width: 100%;
+        padding-top: 10px;
     }
 }
