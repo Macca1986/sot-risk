@@ -162,6 +162,14 @@ section {
     font-size: 30px;
 }
 
+#sot-av-link {
+    color: #333;
+}
+
+#sot-av-link:hover {
+    color: rgb(0, 29, 75);
+}
+
 /* Footer */
 footer {
     background-color: rgb(0, 29, 75);
